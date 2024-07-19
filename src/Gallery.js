@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Tour from './Tour';
-import './Gallery.css';
+import './App.css'; // Import the consolidated CSS file
 
 const Gallery = () => {
   const [tours, setTours] = useState([]);
@@ -9,15 +9,18 @@ const Gallery = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios.get('https://course-api.com/react-tours-project')
-      .then((response) => {
+    const fetchTours = async () => {
+      try {
+        const response = await axios.get('https://course-api.com/react-tours-project');
         setTours(response.data);
         setLoading(false);
-      })
-      .catch((error) => {
+      } catch (error) {
         setError(error.message);
         setLoading(false);
-      });
+      }
+    };
+
+    fetchTours();
   }, []);
 
   const removeTour = (id) => {

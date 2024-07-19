@@ -1,21 +1,11 @@
+
 .App {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 100vh;
+  min-height: 10vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -24,15 +14,59 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding: 20px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.loading {
+  font-size: 2em;
+  color: #007bff;
+}
+
+.error {
+  color: red;
+  font-size: 1.5em;
+}
+
+.tour {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  padding: 20px;
+  width: 300px;
+}
+
+.tour img {
+  max-width: 100%;
+  border-radius: 5px;
+}
+
+.tour-info {
+  text-align: left;
+}
+
+.tour h2 {
+  margin: 10px 0;
+}
+
+.tour button {
+  background: #007bff;
+  border: none;
+  color: white;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.tour button:hover {
+  background: #0056b3;
+}
+
+.read-more {
+  color: #007bff;
+  cursor: pointer;
 }

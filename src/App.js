@@ -1,6 +1,6 @@
-import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Gallery from './components/Gallery';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Gallery from './Gallery';
 import './App.css';
 
 const App = () => {
@@ -10,9 +10,9 @@ const App = () => {
         <header className="App-header">
           <h1>Tour Comparison App</h1>
         </header>
-        <Switch>
-          <Route path="/" exact component={Gallery} />
-        </Switch>
+        <Routes>
+          <Route path="/" element={<Gallery />} />
+        </Routes>
       </div>
     </Router>
   );
